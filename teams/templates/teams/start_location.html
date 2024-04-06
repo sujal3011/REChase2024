@@ -1,0 +1,303 @@
+{% extends "teams/base_bootstrap.html" %}
+
+{% load static %}
+{% block content %}
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/d43543296f.js" crossorigin="anonymous"></script>
+
+<style>
+  
+
+  @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+  @import url('https://fonts.cdnfonts.com/css/fast-hand');
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+    a:link {
+      color: green;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:visited {
+      color: rgb(252, 0, 42);
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:hover {
+      color: red;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:active {
+      color: rgb(0, 255, 85);
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    /*footer styling */
+		footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(1, 2, 3, 0.7);
+		  backdrop-filter: blur(5px);
+      height: auto;
+      width: 100vw;
+      font-family: "Open Sans";
+      padding-top: 15px;
+      color: #fff;
+    }
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer-content h3 {
+      text-shadow: 0 0 4px #ff0000;
+      font-size: 1.5rem;
+  
+      font-weight: 400;
+      text-transform: capitalize;
+      line-height: 1rem;
+    }
+    .footer-content p {
+      text-shadow: 0 0 4px #ff0000;
+      max-width: 500px;
+      margin: 1px auto;
+  
+      font-size: 1.5rem;
+    }
+	.socials{
+		list-style: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 1rem 0 1rem 0;
+	}
+	.socials li{
+		margin: 0 10px;
+	}
+	.socials a{
+		text-decoration: none;
+		color: #fff;
+	}
+	.socials a i{
+		font-size: 2rem;
+		transition: color .4s ease;
+		margin-left: 1vw;
+		margin-right: 1vw;
+
+	}
+	.socials a:hover i{
+		color: white;
+	}
+
+  .join_grp_img{
+    border: none;
+    width: 100%;
+  }
+
+  .qr_container{
+    padding: 1em;
+    color: white;
+    background: transparent;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 10px;
+    font-size: 1.2em;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    margin-left: 5rem;
+  }
+
+  .join_heading{
+    font-size: 3rem;
+    color:#E97957;
+  }
+
+  .join_container{
+    margin-top: 3rem;
+  }
+
+  .join_container a:hover{
+    
+    border: solid 1px #E97957;
+    box-shadow: 0 0 5px #E97957, 0 0 25px #E97957;
+    border-radius: 9px;
+
+}
+
+  
+
+	@media (max-width: 800px) {
+	    .footer-content p {
+		    font-size: 1.3rem;
+      }
+
+      .qr_container{
+        width: 35%;
+      }
+
+
+	}
+
+  @media (max-width: 600px) {
+		.footer-content p {
+			font-size: 1.2rem;
+		}
+
+    .join_container{
+      flex-direction: column;
+    }
+  
+    .qr_container{
+      width: 43%;
+      margin-left: 0;
+      margin-top: 2rem;
+    }
+
+    .join_heading{
+      font-size: 2.5rem;
+
+    }
+	}
+
+
+    </style>
+
+<style> 
+
+input[type=submit] {
+      background: -webkit-gradient(linear,left bottom, left top,from(#000000),to(#262626));
+      background: -webkit-linear-gradient(bottom,#000000,#262626);
+      background: -moz-linear-gradient(bottom,#000000,#262626);
+      background: -o-linear-gradient(bottom,#000000,#262626);
+      background: linear-gradient(0deg,#000000,#262626);
+      backdrop-filter: blur(10px);
+      padding: 5px 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .4);
+    }
+    </style>
+
+<div class="card text-center" style="background: rgba(1, 2, 3,0.4); padding: 30px 30px ;">
+    <div class="card-header" >
+        {% comment %} <h1 style="color: white; font-family: 'Fast Hand', sans-serif;" class="text-center">{{team.name}}</h1>
+		 {% endcomment %}
+			<p class="card-text" style="color: white; letter-spacing: 2px; font-family: 'Orbitron', sans-serif; padding-left: 10px;padding-right: 10px;visibility: visible;">
+				REChase is LIVE!
+			</p>
+
+      <br>
+        <div  class="row" >
+            <div class="col-lg-12 mar" style="margin-bottom: 10px;">
+                <h2 style="color: white; font-family: 'Audiowide', sans-serif;" class="text-center">Visit the Lords Arena to get the clue to your first location</h2>
+               
+            </div>
+        </div>
+        <br>
+
+      <div style="color: white; letter-spacing: 2px; font-family: 'Orbitron', sans-serif; padding-left: 10px;padding-right: 10px;visibility: visible;">
+        <h1 class="join_heading">Join the official Whatsapp group of REChase</h1>
+
+        <div class="join_container" style="display: flex;justify-content: center;align-items: center;flex-wrap: wrap;">
+
+         
+
+          <a style="padding:1em;color: white;background: transparent;text-decoration: none;font-weight: 800;border-radius: 10px;font-size: 1.2em;border: 1px solid white;display: flex;align-items: center;justify-content: center;" href="https://chat.whatsapp.com/BZDuCkjqY0jEA2GiSJGKaw" target="_blank">
+
+            Click to Join 
+            <i class="fa-brands fa-whatsapp fa-2x" style="margin-left: 0.4em;"></i>
+          
+          </a>
+          
+
+
+          <div class="qr_container">
+            <span>Scan to Join</span>
+            
+            <img class="join_grp_img" src="{% static 'teams/images/whatsapp_QR2.jpeg' %}" alt="QR"> 
+
+          </div> 
+
+        </div>
+
+
+      </div>
+
+        
+
+  </div>
+</div>
+
+
+  <div style="height: 100px;"></div>
+
+
+  <footer >
+    <div class="footer-content">
+      <p style="
+      text-shadow: none;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 2px;
+      margin-top:5px;
+    ">Developed by: RECursion (Team Aavishkar)</p>
+    </div>
+    <div class="socials">
+      <li>
+        <a href="https://www.facebook.com/arhn.nitd" target="blank">
+          <i
+            style="height: 30px; width: auto; border: none"
+            class="fab fa-facebook-square"
+          ></i
+        ></a>
+  
+        
+        
+  
+        <a href="https://www.instagram.com/arhn.nitd/" target="blank">
+          <i
+            style="height: 35px; width: auto; border: none"
+            class="fab fa-instagram"
+          ></i
+        ></a>
+  
+        {% comment %} <a href="https://www.recursionnitd.in/" target="blank"
+          ><img
+            style="height: 30px; width: auto; border: none;margin:0px 2.3px;"
+            src="{% static 'teams/images/REC_logo.png' %}"
+        /></a> {% endcomment %}
+  
+        
+  
+        <a
+				href="https://www.linkedin.com/company/aarohan-nit-durgapur/"
+				target="blank"
+			>
+          <i
+            style="height: 35px; width: auto; border: none"
+            class="fab fa-linkedin"
+          ></i
+        ></a>
+  
+      </li>
+    </div>
+  
+  </footer>
+
+  
+{% endblock %}
