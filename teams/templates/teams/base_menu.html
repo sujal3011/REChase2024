@@ -201,6 +201,13 @@ REChase
     transform: translate(-50%, -50%);
     transition: 0.3s;
   }
+
+  .card-text.live {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    padding: 10px;
+  }
+
   @media (max-width: 500px) {
     .cursor {
       cursor: none;
@@ -453,7 +460,7 @@ REChase
     <div class="card-body">
       {% if wait %}
       <p
-        class="card-text"
+        class="card-text live"
         style="
           color: white;
           letter-spacing: 2px;
@@ -474,7 +481,7 @@ REChase
         >
       </p>
       {% elif started %}
-      <p class="card-text">REChase is LIVE now !!</p>
+      <p class="card-text live"  style="color: white">REChase is LIVE now !!</p>
       {% endif %}
     </div>
   </div>
